@@ -19,6 +19,7 @@
     <!-- styles -->
     <style>
         * {
+
             font-family: "Geist", sans-serif;
         }
     </style>
@@ -40,9 +41,9 @@
 
     <!-- Buttons - All/Open/Closed  -->
     <section class="bg-white rounded-xl shadow mt-10 p-6 w-11/12 mx-auto">
-        <button class="btn btn-primary px-10">All</button>
-        <button class="btn text-gray-400 px-10">Open</button>
-        <button class="btn text-gray-400 px-10">Closed</button>
+        <button class="onclick='togglebtn(all-Filter-Btn)' btn btn-primary px-10">All</button>
+        <button class="onclick='togglebtn(open-Filter-Btn)' btn text-gray-400 px-10 ">Open</button>
+        <button class="onclick='togglebtn(closed-Filter-Btn)' btn text-gray-400 px-10 ">Closed</button>
     </section>
 
     <!-- Issues and icons -->
@@ -59,23 +60,17 @@
 
         <!-- open and closed button -->
         <div>
-            <span><i class="fa-solid fa-circle text-green-500 text-sm"></i>Open</span>
-            <span><i class="fa-solid fa-circle text-purple-600 text-sm"></i>Closed</span>
+            <span><i class="fa-solid fa-circle text-green-500 text-sm"></i> Open</span>
+            <span><i class="fa-solid fa-circle text-purple-600 text-sm"></i> Closed</span>
         </div>
 
 
     </section>
 
     <!-- Displaying cards -->
-    <div class="w-11/12 mx-auto shadow-xl grid grid-cols-4 p-6">
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias hic aliquam maxime sit dolorem molestiae
-            eaque, aperiam voluptate soluta velit.</div>
-        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto adipisci minima cupiditate harum? Voluptas
-            mollitia quam ab quae voluptatem aspernatur.</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae incidunt laborum optio officiis, veritatis
-            dolore iste debitis dolor nobis accusamus.</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque perspiciatis magni aliquid atque, ex
-            nostrum quidem iste at fugiat soluta?</div>
+    <div id="card-container" id="border-color"
+        class=" bg-white w-11/12 mx-auto shadow grid grid-cols-4 p-6 my-10 gap-2">
+
     </div>
 
     <script src="./script/issues.js"></script>
