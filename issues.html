@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Issues</title>
+    <!-- daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- styles -->
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar bg-base-100 shadow-sm flex justify-between">
+            <div class="flex items-center">
+                <img class="w-[10%]" src="./assets/github-logo.png" alt="logo">
+                <a class="text-xl font-bold">Github Issues Tracker</a>
+            </div>
+            <div class="flex gap-2">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                <button class="btn btn-primary">+ New Issues</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Buttons - All/Open/Closed  -->
+    <section class="bg-white rounded-xl shadow mt-10 p-6 w-11/12 mx-auto">
+        <button class="btn btn-primary px-10">All</button>
+        <button class="btn text-gray-400 px-10">Open</button>
+        <button class="btn text-gray-400 px-10">Closed</button>
+    </section>
+
+    <!-- Issues and icons -->
+    <section class="bg-white rounded-xl shadow mt-10 p-6 w-11/12 mx-auto flex justify-between items-center">
+        <div class="flex gap-5">
+            <div>
+                <img class='items-center p-2' src="./assets/Aperture.png" alt="image">
+            </div>
+            <div>
+                <h2 class="font-bold">50 Issues</h2>
+                <p>Track and manage your project issues</p>
+            </div>
+        </div>
+
+        <!-- open and closed button -->
+        <div>
+            <span><i class="fa-solid fa-circle text-green-500 text-sm"></i>Open</span>
+            <span><i class="fa-solid fa-circle text-purple-600 text-sm"></i>Closed</span>
+        </div>
+
+
+    </section>
+
+    <!-- Displaying cards -->
+    <div class="w-11/12 mx-auto shadow-xl grid grid-cols-4 p-6">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias hic aliquam maxime sit dolorem molestiae
+            eaque, aperiam voluptate soluta velit.</div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto adipisci minima cupiditate harum? Voluptas
+            mollitia quam ab quae voluptatem aspernatur.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae incidunt laborum optio officiis, veritatis
+            dolore iste debitis dolor nobis accusamus.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque perspiciatis magni aliquid atque, ex
+            nostrum quidem iste at fugiat soluta?</div>
+    </div>
+
+    <script src="./script/issues.js"></script>
+</body>
+
+</html>

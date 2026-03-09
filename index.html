@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github-Issue-Tracker</title>
+    <!-- daisy and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- styles -->
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- login form -->
+    <div class="flex items-center justify-center min-h-screen">
+
+        <fieldset id="form"
+            class=" flex flex-col justify-center fieldset bg-white shadow-2xl rounded-box w-xl p-10 space space-y-4">
+            <div class="space-y-2">
+                <div>
+                    <img class="mx-auto" src="./assets/github-logo.png" alt="github-logo">
+                </div>
+
+                <h2 class="text-2xl text-center mb-10">Github Issues Tracker</h2>
+
+            </div>
+            <div>
+                <label class="label text-xl text-black">Username</label>
+                <br>
+                <input id='sign-in-name' type="email" class="input w-full" placeholder="Enter your username" />
+                <p class="text-[#4A00FF]">default:admin</p>
+            </div>
+            <div>
+                <label class="label text-xl text-black">Password</label>
+                <br>
+                <input id="sign-in-password" type="password" class="input w-full" placeholder="Enter your password" />
+                <p class="text-[#4A00FF]">default:admin123</p>
+            </div>
+
+            <button id='sign-in-btn' class="btn btn-primary mt-4">Sign in</button>
+
+            <div class="mx-auto flex">
+                <hr>
+                <h1 class="text-xl"> OR</h1>
+                <hr>
+            </div>
+
+            <div class="mx-auto">
+                <p class="text-gray-400 text-center text-xl mb-8">Demo Credentials:</p>
+                <p class="text-xl"><span class="font-bold">Username: </span>admin</p>
+                <p class="text-xl"><span class="font-bold">Password:</span> admin123</p>
+            </div>
+        </fieldset>
+
+
+
+
+    </div>
+
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
