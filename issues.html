@@ -26,54 +26,114 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navbar bg-base-100 shadow-sm flex justify-between">
-            <div class="flex items-center">
-                <img class="w-[10%]" src="./assets/github-logo.png" alt="logo">
-                <a class="text-xl font-bold">Github Issues Tracker</a>
+    <header class="bg-base-100 shadow-sm">
+        <div class=" flex-col gap-3 sm:flex-row navbar">
+            <div class="flex-1 flex items-center gap-3 ">
+                <img src="assets/github-logo.png" alt="Github logo" class="w-10">
+                <h2 class=" text-xl font-bold">GitHub Issues Tracker</h2>
             </div>
-            <div class="flex gap-2">
-                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                <button class="btn btn-primary">+ New Issues</button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Buttons - All/Open/Closed  -->
-    <section class="bg-white rounded-xl shadow mt-10 p-6 w-11/12 mx-auto">
-        <button class="onclick='togglebtn(all-Filter-Btn)' btn btn-primary px-10">All</button>
-        <button class="onclick='togglebtn(open-Filter-Btn)' btn text-gray-400 px-10 ">Open</button>
-        <button class="onclick='togglebtn(closed-Filter-Btn)' btn text-gray-400 px-10 ">Closed</button>
-    </section>
-
-    <!-- Issues and icons -->
-    <section class="bg-white rounded-xl shadow mt-10 p-6 w-11/12 mx-auto flex justify-between items-center">
-        <div class="flex gap-5">
             <div>
-                <img class='items-center p-2' src="./assets/Aperture.png" alt="image">
-            </div>
-            <div>
-                <h2 class="font-bold">50 Issues</h2>
-                <p>Track and manage your project issues</p>
+                <form id="search-form" class="flex gap-2">
+                    <input type="search" id="input-search" placeholder="Search issues..." class="input input-bordered">
+
+                    <button type="submit" id="btn-search" class="btn btn-primary">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
             </div>
         </div>
+    </header>
 
-        <!-- open and closed button -->
-        <div>
-            <span><i class="fa-solid fa-circle text-green-500 text-sm"></i> Open</span>
-            <span><i class="fa-solid fa-circle text-purple-600 text-sm"></i> Closed</span>
-        </div>
+    <main class="w-11/12 mx-auto">
+
+        <!-- button container -->
+        <section class="shadow-md flex gap-5 my-4 p-4 ">
+
+            <button onclick="toggleStyle('btn-all')" id="btn-all" class="btn btn-primary px-8">All</button>
+            <button onclick="toggleStyle('btn-open')" id="btn-open" class="btn px-8">Open</button>
+            <button onclick="toggleStyle('btn-close')" id="btn-close" class="btn px-8">Closed</button>
+
+        </section>
+
+        <!-- Issues + Open + Closed -->
+
+        <section class="issues-count-section shadow rounded p-5 mt-4">
+
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+
+                <!-- Issue count -->
+                <div class="flex items-center gap-3">
+
+                    <img src="./assets/Aperture.png" alt="Issues dashboard icon" class="w-12 h-12">
+
+                    <div>
+                        <h2 class="text-xl font-bold">
+                            <span id="count-of-issues"></span> Issues
+                        </h2>
+                        <p class="text-slate-500">Track and manage your project issues</p>
 
 
-    </section>
+                    </div>
 
-    <!-- Displaying cards -->
-    <div id="card-container" id="border-color"
-        class=" bg-white w-11/12 mx-auto shadow grid grid-cols-4 p-6 my-10 gap-2">
+                </div>
 
-    </div>
+                <!-- Status indicators -->
+                <div class="flex gap-6">
 
-    <script src="./script/issues.js"></script>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                        <p>Open</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-purple-500"></span>
+                        <p>Closed</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Issue card containers -->
+        <section id="all-issues-container"
+            class="bg-white shadow-2xl grid sm:gap-4 mt-3 p-3 md:grid-cols-3  lg:grid-cols-4">
+
+
+
+            <!-- data will be loaded here automatically by JS -->
+
+        </section>
+
+
+
+
+        <!-- Loading Spinner  -->
+        <section id="loading-spinner" class="loading-spinner h-[60vh] flex justify-center items-center hidden">
+            <span class="loading loading-dots loading-xl"></span>
+        </section>
+
+        <!-- Showing Modal -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="details-container">
+
+                </div>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+    </main>
+    <script src="./script/issue.js"></script>
 </body>
 
 </html>
