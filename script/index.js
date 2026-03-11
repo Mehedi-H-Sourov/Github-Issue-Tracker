@@ -9,7 +9,6 @@ form.addEventListener("click", function (event) {
     // validation
     if (username == "admin" && password == "admin123") {
 
-
         // redirect to issues page
         window.location.href ="../issues.html";
 
