@@ -35,7 +35,8 @@
             <!-- search functionality -->
 
             <div class="flex gap-1">
-                <input id="input-search" type="search" placeholder=" Search issues..." class="input input-bordered w-24 md:w-auto" />
+                <input id="input-search" type="search" placeholder=" Search issues..."
+                    class="input input-bordered w-24 md:w-auto" />
                 <button id="btn-search" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i>
                     Search</button>
             </div>
@@ -45,7 +46,7 @@
     <main class="w-11/12 mx-auto">
 
         <!-- button container -->
-        <section class="shadow-md flex gap-5 my-4 p-4 ">
+        <section class="shadow-md flex gap-5 my-4 p-4 justify-center">
 
             <button onclick="toggleStyle('btn-all')" id="btn-all" class="btn btn-primary px-8">All</button>
             <button onclick="toggleStyle('btn-open')" id="btn-open" class="btn px-8">Open</button>
@@ -55,9 +56,9 @@
 
         <!-- Issues + Open + Closed -->
 
-        <section class="issues-count-section shadow rounded p-5 mt-4">
+        <section class="issues-count-section shadow rounded p-5 mt-4 ">
 
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="flex flex-col sm:flex-col sm:items-left md:flex-row justify-between items-start gap-4">
 
                 <!-- Issue count -->
                 <div class="flex items-center gap-3">
