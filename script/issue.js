@@ -191,8 +191,9 @@ const displayModal = (details) => {
 
 }
 
-
 loadIssues();
+
+// Implementing search functionality 
 
 document.getElementById('btn-search').addEventListener('click', (e) => {
     e.preventDefault();
