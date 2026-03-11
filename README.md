@@ -8,7 +8,7 @@
 
 - **`var`**: Function-scoped or globally scoped. Variables declared with var inside a function are accessible anywhere within that function, even inside blocks like loops or `if` statements. If declared outside a function, they become global. var declarations are **hoisted** to the top of their scope.
 
-- **`let`**: Block-scoped.Variables declared with `let` are not initialized until the code execution reaches the declaration, creating a **temporal dead zone (TDZ)**. Accessing the variable before initialization throws a ReferenceError.
+- **`let`**: Block-scoped.Variables declared with `let` are not initialized until the code execution reaches the declaration, creating a **temporal dead zone (TDZ)**. Accessing the variable before initialization throws a git a**ReferenceError**.
 
 - **`const`**: Block-scoped and immutable. A `const` variable cannot be reassigned. Like `let`, it also has a temporal dead zone. For objects or arrays, the **reference cannot change**, but their contents (properties or elements) can still be mutated.
 
