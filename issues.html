@@ -32,15 +32,12 @@
                 <img src="assets/github-logo.png" alt="Github logo" class="w-10">
                 <h2 class=" text-xl font-bold">GitHub Issues Tracker</h2>
             </div>
+            <!-- search functionality -->
 
-            <div>
-                <form id="search-form" class="flex gap-2">
-                    <input type="search" id="input-search" placeholder="Search issues..." class="input input-bordered">
-
-                    <button type="submit" id="btn-search" class="btn btn-primary">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
+            <div class="flex gap-1">
+                <input id="input-search" type="search" placeholder=" Search issues..." class="input input-bordered w-24 md:w-auto" />
+                <button id="btn-search" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i>
+                    Search</button>
             </div>
         </div>
     </header>
@@ -99,12 +96,20 @@
 
 
         <!-- Issue card containers -->
-        <section id="all-issues-container"
-            class="bg-white shadow-2xl grid sm:gap-4 mt-3 p-3 md:grid-cols-3  lg:grid-cols-4">
+        <section>
+
+
+            <div id="all-issues-container"
+                class="bg-white shadow-2xl grid sm:gap-4 mt-3 p-3 md:grid-cols-3  lg:grid-cols-4">
+
+            </div>
 
 
 
             <!-- data will be loaded here automatically by JS -->
+
+
+
 
         </section>
 
@@ -117,9 +122,13 @@
         </section>
 
         <!-- Showing Modal -->
-        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+        <dialog id="modal_details" class="modal">
             <div class="modal-box">
-                <div id="details-container">
+                <div id="details-container" class="space-y-4">
+
 
                 </div>
 
@@ -133,6 +142,8 @@
         </dialog>
 
     </main>
+
+
     <script src="./script/issue.js"></script>
 </body>
 
